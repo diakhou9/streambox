@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StreamBox</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
     <h1>StreamBox</h1>
-    <p>Your streaming platform</p>
+    <p>Browse drama, comedy, thriller, and more. Watch
+anywhere.</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Shows</a>
-    <a href="#">Categories</a>
-    <a href="#">About</a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#featured">Shows</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
   </nav>
 
   <main>
 
     <section id="hero">
-      <h2>Watch Something Amazing</h2>
-      <p>Big title + hero image goes here</p>
+      <h2>Stream what you love</h2>
+      <p class="subtext">Anytime, anywhere</p>
+      <a href="#" class="btn-primary">Browse</a>
     </section>
 
-    <section id="featured">
-      <h2>Featured Shows</h2>
+    <section class="category">
+    <h2>Drama</h2>
+    <div class="grid">
+      <article class="card"><h3>Show 1</h3></article>
+      <article class="card"><h3>Show 2</h3></article>
+      <article class="card"><h3>Show 3</h3></article>
+      <article class="card"><h3>Show 4</h3></article>
+    </div>
+  </section>
 
-      <article>
-        <h3>Show 1</h3>
-      </article>
+    <section class="category">
+    <h2>Comedy</h2>
+    <div class="grid">
+      <article class="card"><h3>Show 1</h3></article>
+      <article class="card"><h3>Show 2</h3></article>
+      <article class="card"><h3>Show 3</h3></article>
+      <article class="card"><h3>Show 4</h3></article>
+    </div>
+  </section>
 
-      <article>
-        <h3>Show 2</h3>
-      </article>
-
-      <article>
-        <h3>Show 3</h3>
-      </article>
-
-    </section>
+  <section class="category">
+    <h2>Thriller</h2>
+    <div class="grid">
+      <article class="card"><h3>Show 1</h3></article>
+      <article class="card"><h3>Show 2</h3></article>
+      <article class="card"><h3>Show 3</h3></article>
+      <article class="card"><h3>Show 4</h3></article>
+    </div>
+  </section>
 
   </main>
 
   <footer>
-    <p>Subscribe to our newsletter</p>
-    <p>© 2026 StreamBox</p>
+    <p>&copy; 2026 StreamBox. All rights reserved.</p>
   </footer>
 
 </body>
