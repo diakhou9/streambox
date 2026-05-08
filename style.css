@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   background: #0F172A;
   color: #F8FAFC;
@@ -12,10 +19,11 @@ body {
 }
 
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #020617;
 }
 
 header h1 {
@@ -24,14 +32,8 @@ header h1 {
 }
 
 nav ul {
-  display: flex;
+  display: none;
   list-style: none;
-  padding: 1rem 2rem;
-  background: #020617;
-}
-
-nav li {
-  margin-right: 1.5rem;
 }
 
 nav a {
@@ -44,6 +46,22 @@ nav a:hover {
   color: #F97316;
 }
 
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav.open ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 #hero {
   padding: 4rem 2rem;
   background: #1E293B;
@@ -51,12 +69,11 @@ nav a:hover {
 }
 
 #hero h2 {
-  font-size: 2.5rem;
+  font-size: calc(1.5rem + 4vw);
   margin-bottom: 0.5rem;
 }
 
 .subtext {
-  font-size: 1rem;
   color: #CBD5E1;
   margin-bottom: 1.5rem;
 }
@@ -75,31 +92,26 @@ nav a:hover {
   background: #ea580c;
 }
 
-#featured {
-  padding: 2rem;
+.category-section {
+  padding: 1rem;
 }
 
-#featured h2 {
+.category-section h2 {
+  color: #F97316;
   margin-bottom: 1rem;
 }
 
 .category {
-
-display: grid;
-
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
-gap: 1rem;
-
-padding: 2rem;
-
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .card {
   background: #1E293B;
   padding: 1.5rem;
   border-radius: 8px;
-  flex: 1;
+  min-height: 120px;
   transition: transform 0.2s ease;
 }
 
@@ -107,9 +119,33 @@ padding: 2rem;
   transform: translateY(-5px);
 }
 
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
 footer {
   padding: 1rem 2rem;
   border-top: 1px solid #334155;
   text-align: center;
   margin-top: 2rem;
+}
+
+@media (min-width: 40em) {
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: 60em) {
+
+  .category-section {
+    padding: 2rem 3rem;
+  }
 }
